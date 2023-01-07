@@ -7,7 +7,6 @@ import {
 } from "@heroicons/react/outline";
 import { signIn, signOut, useSession } from "next-auth/react";
 import {useRouter} from "next/router"
-import { useSelect } from '@mui/base';
 import { useSelector } from 'react-redux';
 import { selectItems } from '../slices/basketSlice';
 
@@ -39,7 +38,7 @@ function Header() {
                     className='p-2 h-full w-4 flex-grow flex-shrink rounded-l-md focus:outline-none px-4 ' 
                     type="text" 
                 />
-                <SearchIcon className="h-12 p-4 " />
+                <SearchIcon  className="h-12 p-4 " />
             </div>
 
 
