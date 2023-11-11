@@ -8,13 +8,13 @@ import * as admin from 'firebase-admin';
  }) : admin.app();
 
 
- // Establios connection to stripe
+ // Establish connection to stripe
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const endpointSecret = process.env.STRIPE_SIGNING_SECRET;
 
 const fulfillOrder = async (session) => {
-        console.log('Fulfilling order', session)
+        // console.log('Fulfilling order', session)
 
         return app
         .firestore()
@@ -28,7 +28,7 @@ const fulfillOrder = async (session) => {
         })
         .then(()=>{
             console.log(`SUCCESS: Order ${session.id} had been added to the DB`);
-        })
+        }) 
 }
 
 export default async(req, res)=> {

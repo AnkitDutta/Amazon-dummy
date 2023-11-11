@@ -9,23 +9,17 @@ export default function Home({ products }) {
     <div className="bg-gray-100">
       <Head>
         <title>Amazon 2.0</title>
-      </Head>
-
-      {/* Header */}
-      <Header />
-
+        </Head>
+      <Header/>
       <main className="max-w-screen-2xl mx-auto">
-        {/* Banner */}
         <Banner /> 
-
-        {/* Product Feed */}
         <ProductFeed products={products}/>
       </main>
     </div>
   );
 }
 
-
+// Asynchronous function used for Server side rendering in NEXT.JS
 export async function getServerSideProps(context) {
   const session= await getSession(context);
   const products = await fetch("https://fakestoreapi.com/products").then(

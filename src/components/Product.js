@@ -10,7 +10,7 @@ const min_rating = 1;
 
 function Product({ id, title, price, description, category, image }) {
  
-    const dispatch = useDispatch(); //used to shoot action s ot redux
+    const dispatch = useDispatch(); //used to shoot actions to redux
 
 const[rating, setRating] = useState(0);
 

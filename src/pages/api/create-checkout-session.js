@@ -16,9 +16,11 @@ export default async (req, res) => {
 
         },
     }));
+
+    //Create a checkout session by calling apppi backend and passing info
     const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
-        shipping_options: [{shipping_rate: 'shr_1MHjNvSFwgVrFIihYNUHjN3c' }],
+        shipping_options: [{shipping_rate: 'shr_1NYRSSSEPahtIHWdo35fCr53' }],
         shipping_address_collection: {
             allowed_countries:['GB','US','CA'],
         },
